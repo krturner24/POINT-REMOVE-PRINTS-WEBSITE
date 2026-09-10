@@ -70,3 +70,40 @@ window.PRP_PRODUCTS = [
     orderType: "Custom T-Shirt"
   }
 ];
+
+// Keep the folded-shirts hero from being stretched beyond its source size.
+// This makes the current photo look much sharper while preserving the mockup layout.
+(() => {
+  const style = document.createElement('style');
+  style.textContent = `
+    .hero-img{
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      padding:22px 38px !important;
+      background:#e4e0d7 !important;
+    }
+    .hero-img img{
+      width:auto !important;
+      height:auto !important;
+      max-width:515px !important;
+      max-height:650px !important;
+      object-fit:contain !important;
+      object-position:center center !important;
+      filter:contrast(1.04) saturate(1.02);
+    }
+    @media(max-width:760px){
+      .hero-img{
+        height:auto !important;
+        min-height:0 !important;
+        padding:18px 12px 26px !important;
+      }
+      .hero-img img{
+        width:88% !important;
+        max-width:515px !important;
+        height:auto !important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
