@@ -6,153 +6,35 @@
 <title>Point Remove Prints | Custom Apparel, Embroidery & DTF</title>
 <meta name="description" content="Point Remove Prints creates custom apparel, embroidery, DTF transfers, hats, team gear and outdoor designs.">
 <style>
-:root{
-  --cream:#f4efe6;
-  --paper:#fbf8f2;
-  --ink:#1f211b;
-  --olive:#4f5337;
-  --olive-dark:#393d28;
-  --sage:#8f9479;
-  --tan:#b7a085;
-  --line:#d8d0c3;
-  --muted:#6f6d64;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:auto;padding:0 22px}
-.topbar{background:var(--olive-dark);color:#f8f4eb;text-align:center;padding:9px 14px;font:600 11px/1.3 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}
-.sitehead{position:sticky;top:0;z-index:20;background:rgba(251,248,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(79,83,55,.18)}
-.headrow{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{display:flex;flex-direction:column;line-height:1}.logo .prp{font:900 42px/0.9 Arial,sans-serif;letter-spacing:-.08em;font-style:italic}.logo .name{font-size:16px;letter-spacing:.08em}.logo .sub{font:700 9px/1.3 Arial,sans-serif;letter-spacing:.28em;margin-top:7px;color:#5c5c52}
-.navlinks{display:flex;align-items:center;gap:24px;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--olive);color:#fff;border:1px solid var(--olive);padding:14px 22px;font:700 12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.2s}
-.navbtn:hover,.btn:hover{background:var(--olive-dark)}
-.menu{display:none;font:700 26px Arial,sans-serif}
-.hero{position:relative;min-height:570px;background:#d9d3c6;overflow:hidden}
-.heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.78) brightness(.72)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(248,244,236,.95) 0%,rgba(248,244,236,.88) 32%,rgba(248,244,236,.4) 54%,rgba(35,36,28,.05) 78%)}
-.heroinner{position:relative;z-index:2;min-height:570px;display:flex;align-items:center}
-.herocopy{max-width:570px;padding:72px 0}
-.eyebrow{font:700 11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
-h1,h2,h3{font-weight:400}
-h1{font-size:clamp(54px,8vw,96px);line-height:.86;margin:14px 0 10px;letter-spacing:-.04em}
-.script{font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(42px,6vw,72px);line-height:1;margin:0 0 22px;color:#292820;transform:rotate(-2deg);display:inline-block}
-.herocopy p{max-width:490px;font:600 13px/1.8 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#48483f;margin:0 0 28px}
-.featurestrip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px;max-width:610px}
-.feature{font:700 10px/1.4 Arial,sans-serif;text-transform:uppercase;text-align:center;color:#3f4038}.feature b{display:block;font-size:24px;margin-bottom:6px;font-family:Georgia,serif;font-weight:400}
-.introband{text-align:center;padding:34px 20px 28px;background:#f8f4ec;border-bottom:1px solid var(--line)}
-.introband .script{font-size:46px;margin-bottom:0}.introband p{font:700 11px Arial,sans-serif;letter-spacing:.36em;text-transform:uppercase;margin:4px 0 0}
-.categories{padding:24px 0 50px}
-.catgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.cat{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 4px 18px rgba(48,45,38,.05)}
-.cat img{aspect-ratio:1/1;object-fit:cover;filter:saturate(.78)}
-.catlabel{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;font-size:16px;text-transform:uppercase}.catlabel span:last-child{font-size:24px;color:var(--olive)}
-.lifestyle{position:relative;min-height:280px;display:grid;place-items:center;text-align:center;color:#fff;background:#4e5544;overflow:hidden}
-.lifestyle::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(38,41,31,.35),rgba(38,41,31,.65)),url('images/10759.png') center 56%/cover no-repeat;filter:saturate(.72)}
-.lifestyle .inner{position:relative;z-index:1;padding:42px 20px}.lifestyle .eyebrow{color:#fff}.lifestyle h2{font-size:clamp(34px,5vw,58px);letter-spacing:.06em;margin:12px 0}.lifestyle p{font:600 12px Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase}.outline{background:transparent;border-color:#fff;margin-top:12px}
-.section{padding:66px 0}.sectiontitle{text-align:center;max-width:720px;margin:0 auto 32px}.sectiontitle .eyebrow{margin-bottom:8px}.sectiontitle h2{font-size:44px;margin:0 0 10px}.sectiontitle p{font:15px/1.7 Arial,sans-serif;color:var(--muted)}
-.shop-group{margin-top:40px}.shop-title{font-size:25px;margin:0 0 16px;border-bottom:1px solid var(--line);padding-bottom:10px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(44,42,36,.05)}
-.card img{width:100%;aspect-ratio:1/1;object-fit:cover}.card .txt{padding:19px;display:flex;flex-direction:column;gap:9px;flex:1}.tag{font:700 10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--olive)}.card h3{font-size:24px;margin:0}.card p{font:14px/1.55 Arial,sans-serif;color:var(--muted);margin:0}.price{font:700 20px Arial,sans-serif}.meta{font:13px Arial,sans-serif;color:#57574e}.card .btn{margin-top:auto;width:100%}.empty{grid-column:1/-1;border:1px dashed var(--line);padding:28px;text-align:center;font:14px Arial,sans-serif;color:var(--muted)}
-.trust{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#f8f4ec}.trustitem{text-align:center;padding:34px 20px;border-right:1px solid var(--line)}.trustitem:last-child{border-right:0}.trustitem b{display:block;font-size:26px;font-weight:400;margin-bottom:8px}.trustitem h3{font-size:18px;margin:0 0 8px;text-transform:uppercase}.trustitem p{font:13px/1.55 Arial,sans-serif;color:var(--muted);margin:0}
-.order{background:#ebe5da}.form{max-width:860px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}.form label{font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px}.form input,.form select,.form textarea{width:100%;padding:14px;border:1px solid #c7beb1;background:#fff;color:var(--ink);font:15px Arial,sans-serif}.form textarea{min-height:125px;resize:vertical}.full{grid-column:1/-1}.note{font:12px/1.5 Arial,sans-serif;color:#68665e}.filebox{border:1px dashed #b2a99c;padding:14px;background:rgba(255,255,255,.45)}
-.contact{text-align:center;padding:48px 20px;background:var(--olive-dark);color:#fff}.contact h2{font-size:38px;margin:0 0 8px}.contact p{font:14px/1.6 Arial,sans-serif}.email{font-weight:700;text-decoration:underline}
-footer{text-align:center;background:#282b1f;color:#cfc8bc;padding:20px;font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:900px){.navlinks a:not(.navbtn){display:none}.catgrid{grid-template-columns:repeat(2,1fr)}.cat:last-child{grid-column:1/-1}.featurestrip{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}.trustitem:nth-child(2){border-right:0}.trustitem:nth-child(-n+2){border-bottom:1px solid var(--line)}}
-@media(max-width:640px){.topbar{font-size:9px;letter-spacing:.13em}.headrow{min-height:78px}.logo .prp{font-size:34px}.logo .name{font-size:13px}.logo .sub{font-size:7px}.navbtn{display:none}.menu{display:block}.hero,.heroinner{min-height:520px}.hero::after{background:linear-gradient(90deg,rgba(248,244,236,.96),rgba(248,244,236,.77) 67%,rgba(248,244,236,.28))}.herocopy{padding:55px 0}.herocopy p{font-size:11px}.featurestrip{grid-template-columns:repeat(2,1fr);max-width:380px}.catgrid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full{grid-column:auto}.trust{grid-template-columns:1fr}.trustitem{border-right:0;border-bottom:1px solid var(--line)}.trustitem:last-child{border-bottom:0}.section{padding:48px 0}}
+:root{--cream:#f4efe6;--paper:#fbf8f2;--olive:#4b4d38;--dark:#343626;--ink:#211c18;--muted:#746e65;--line:#d8cfc2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.topbar{background:var(--dark);color:white;text-align:center;padding:10px 12px;font:600 11px Georgia,serif;letter-spacing:.3em;text-transform:uppercase}
+header{background:#fbf8f2;border-bottom:1px solid #e4dccf;position:sticky;top:0;z-index:50}.head{min-height:118px;display:flex;align-items:center;gap:24px}.logo{width:310px;line-height:1;text-align:center}.logo .prp{font-family:"Brush Script MT","Segoe Script",cursive;font-size:66px;font-weight:700;letter-spacing:-.08em}.logo .name{font:500 23px Georgia,serif;letter-spacing:.08em;text-transform:uppercase}.logo .sub{font:600 8px Georgia,serif;letter-spacing:.44em;text-transform:uppercase;margin-top:7px}.nav{margin-left:auto;display:flex;gap:27px;align-items:center;font:600 11px Georgia,serif;letter-spacing:.05em;text-transform:uppercase}.icons{display:flex;gap:14px;align-items:center;font-size:25px}.cta{background:var(--olive);color:#fff;padding:17px 22px;border-radius:7px;font:600 13px Georgia,serif;letter-spacing:.12em;text-transform:uppercase}.menu{display:none;border:0;background:none;font-size:26px}
+.hero{background:linear-gradient(90deg,#f6f1e9 0%,#eee9df 54%,#dfddd4 100%)}.hero-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:46% 54%;min-height:690px}.hero-copy{padding:52px 34px 38px 48px;display:flex;flex-direction:column;justify-content:center}.hero h1{font:400 clamp(68px,8vw,112px)/.84 Georgia,"Times New Roman",serif;text-transform:uppercase;letter-spacing:-.02em;margin:0}.script{font-family:"Brush Script MT","Segoe Script",cursive;font-size:clamp(52px,6vw,83px);line-height:1;transform:rotate(-3deg);margin:9px 0 27px}.hero p{font:600 13px/1.7 Georgia,serif;letter-spacing:.27em;text-transform:uppercase;max-width:500px;color:#4d473f;margin:0 0 24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--olive);color:white;border:1px solid var(--olive);padding:16px 22px;font:600 13px Georgia,serif;letter-spacing:.11em;text-transform:uppercase;cursor:pointer}.hero .btn{align-self:flex-start}.service-icons{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:550px;margin-top:28px}.service{text-align:center;font:600 9px/1.2 Georgia,serif;text-transform:uppercase}.round{width:38px;height:38px;border:1px solid #5b554d;border-radius:50%;display:grid;place-items:center;margin:0 auto 7px;font-weight:700}.life{font-family:"Brush Script MT","Segoe Script",cursive;font-size:42px;margin-top:25px;transform:rotate(-4deg);width:max-content;max-width:100%}.life small{display:block;font:700 11px Georgia,serif;letter-spacing:.35em;text-transform:uppercase;text-align:center;margin-top:10px;transform:rotate(4deg)}.hero-img{min-height:690px;overflow:hidden}.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.categories{padding:18px 14px 22px;background:#f8f4ed}.cat-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.cat{background:#eee6da;border:1px solid #e0d7c9}.cat img{width:100%;aspect-ratio:1/1;object-fit:cover}.cat span{min-height:60px;padding:0 15px;display:flex;align-items:center;justify-content:space-between;font:500 17px Georgia,serif;text-transform:uppercase}
+.banner{min-height:285px;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(rgba(50,52,38,.58),rgba(50,52,38,.64)),url("images/10760.png") center 52%/cover no-repeat;padding:35px 20px}.banner-k{font:600 12px Georgia,serif;letter-spacing:.35em;text-transform:uppercase}.banner h2{font:400 clamp(33px,5vw,58px)/1 Georgia,serif;text-transform:uppercase;letter-spacing:.04em;margin:17px 0}.banner p{font:600 12px Georgia,serif;letter-spacing:.3em;text-transform:uppercase}.banner .btn{background:rgba(56,58,42,.7);border-color:#fff;margin-top:10px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1120px;margin:auto;padding:30px 20px 36px;text-align:center}.benefit i{font-style:normal;font-size:36px}.benefit h3{font:500 19px/1.1 Georgia,serif;text-transform:uppercase;margin:8px 0}.benefit p{margin:0;color:#6a645c;font:14px Georgia,serif}
+.section{padding:68px 0}.section-head{text-align:center;margin-bottom:34px}.eyebrow{font:600 11px Georgia,serif;letter-spacing:.3em;text-transform:uppercase;color:var(--olive)}.section h2{font:400 46px Georgia,serif;margin:10px 0}.subtext{max-width:700px;margin:auto;color:#746d64;line-height:1.65}.shop-title{font:400 30px Georgia,serif;border-bottom:1px solid var(--line);padding-bottom:12px;margin:36px 0 20px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid #e4ddd1;display:flex;flex-direction:column}.card img{width:100%;aspect-ratio:1/1;object-fit:cover}.txt{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}.tag{font:700 10px Georgia,serif;letter-spacing:.22em;text-transform:uppercase;color:#74705d}.card h3{font:400 26px Georgia,serif;margin:0}.card p{margin:0;color:#6d665f;line-height:1.45}.price{font:600 20px Georgia,serif}.meta{font-size:13px;color:#645e57}.card .btn{margin-top:auto;width:100%}.empty{grid-column:1/-1;padding:28px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
+.order{background:#e8e1d6}.orderbox{max-width:900px;margin:auto;background:#fbf7f0;border:1px solid #d5cbbc;padding:36px}.form{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form label{display:block;font:600 11px Georgia,serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #bdb4a7;background:#fff;font-size:15px}.form textarea{min-height:120px}.full{grid-column:1/-1}.filebox{border:1px dashed #aaa194;padding:14px;background:#f1ece4}.note{font-size:12px;color:#756e66}.contact{background:var(--dark);color:white;text-align:center;padding:48px 20px}.contact h2{font:400 40px Georgia,serif;margin:0 0 10px}.contact p{margin:5px 0;color:#e2ddd4}footer{background:#292b20;color:#d8d3c9;text-align:center;padding:20px;font-size:12px}
+@media(max-width:960px){.nav{display:none}.cta{display:none}.menu{display:block}.logo{width:245px}.hero-grid{grid-template-columns:1fr 1fr;min-height:600px}.hero-img{min-height:600px}.hero h1{font-size:70px}.script{font-size:50px}}
+@media(max-width:760px){.topbar{font-size:8px;letter-spacing:.16em;white-space:nowrap;overflow:hidden}.head{min-height:84px;gap:12px}.logo{width:205px}.logo .prp{font-size:48px}.logo .name{font-size:15px}.logo .sub{font-size:6px}.icons a:first-child{display:none}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:40px 24px 32px}.hero-img{min-height:0;height:475px}.hero h1{font-size:62px}.script{font-size:48px}.hero p{font-size:10px;letter-spacing:.19em}.service-icons{gap:5px}.service{font-size:7px}.round{width:31px;height:31px}.life{font-size:34px}.cat-grid{grid-template-columns:1fr 1fr}.cat:last-child{grid-column:1/-1}.benefits{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full{grid-column:auto}.orderbox{padding:24px 17px}.section h2{font-size:38px}}
 </style>
 </head>
 <body>
-<div class="topbar">Custom Apparel &nbsp; | &nbsp; Embroidery &nbsp; | &nbsp; DTF Transfers &nbsp; | &nbsp; Hats &nbsp; | &nbsp; Team Gear &nbsp; | &nbsp; Outdoors</div>
-<header class="sitehead"><div class="wrap headrow">
-  <a class="logo" href="#top"><span class="prp">PRP</span><span class="name">POINT REMOVE PRINTS</span><span class="sub">CUSTOM APPAREL CO.</span></a>
-  <nav class="navlinks"><a href="#top">Home</a><a href="#shop">Shop</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a class="navbtn" href="#order">Request an Order</a></nav>
-  <div class="menu">☰</div>
+<div class="topbar">Custom Apparel &nbsp;|&nbsp; Embroidery &nbsp;|&nbsp; DTF Transfers &nbsp;|&nbsp; Hats &nbsp;|&nbsp; Team Gear &nbsp;|&nbsp; Outdoors</div>
+<header><div class="wrap head">
+<a class="logo" href="#home"><div class="prp">PRP</div><div class="name">Point Remove Prints</div><div class="sub">Custom Apparel Co.</div></a>
+<nav class="nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#services">Services</a><a href="#about">About</a><a href="#order">Contact</a></nav>
+<div class="icons"><a href="#shop">⌕</a><a href="#shop">🛒</a><button class="menu" id="menu">☰</button></div><a class="cta" href="#order">Request an Order</a>
 </div></header>
-
-<main id="top">
-<section class="hero">
-  <img class="heroimg" src="images/10911.png" alt="Point Remove Prints custom apparel">
-  <div class="wrap heroinner"><div class="herocopy">
-    <div class="eyebrow">Point Remove Prints · Arkansas</div>
-    <h1>CUSTOM<br>APPAREL</h1>
-    <div class="script">Made Your Way.</div>
-    <p>Custom shirts, team gear, business apparel, embroidery, hats, DTF transfers and outdoor designs.</p>
-    <a class="btn" href="#order">Get a Free Mockup →</a>
-    <div class="featurestrip">
-      <div class="feature"><b>♧</b>Business Apparel</div><div class="feature"><b>◉</b>Team Uniforms</div><div class="feature"><b>⌂</b>Church Orders</div><div class="feature"><b>⌁</b>Hunting & Outdoors</div><div class="feature"><b>⇢</b>Fast Turnaround</div>
-    </div>
-  </div></div>
-</section>
-
-<section class="introband"><div class="script">More than shirts...</div><p>It's a lifestyle.</p></section>
-
-<section class="categories wrap" id="services"><div class="catgrid">
-  <a class="cat" href="#shop"><img src="images/11259.png" alt="Custom apparel"><div class="catlabel"><span>Custom Apparel</span><span>›</span></div></a>
-  <a class="cat" href="#order"><img src="images/10761.png" alt="Embroidery"><div class="catlabel"><span>Embroidery</span><span>›</span></div></a>
-  <a class="cat" href="#order"><img src="images/10911.png" alt="DTF transfers"><div class="catlabel"><span>DTF Transfers</span><span>›</span></div></a>
-  <a class="cat" href="#shop"><img src="images/11242.png" alt="Hats"><div class="catlabel"><span>Hats</span><span>›</span></div></a>
-  <a class="cat" href="#shop"><img src="images/10760.png" alt="Outdoors"><div class="catlabel"><span>Outdoors</span><span>›</span></div></a>
-</div></section>
-
-<section class="lifestyle" id="about"><div class="inner"><div class="eyebrow">Apparel for every occasion</div><h2>WORK · PLAY · FAITH · FAMILY</h2><p>Let's bring your ideas to life.</p><a class="btn outline" href="#order">Request an Order</a></div></section>
-
-<section class="section wrap" id="shop">
-  <div class="sectiontitle"><div class="eyebrow">Current Designs</div><h2>Shop Shirts & Hats</h2><p>Browse current styles and send an order request. No payment is taken online yet, so we can confirm garment, sizing, colors and artwork with you first.</p></div>
-  <div class="shop-group"><h3 class="shop-title">Shirts & Apparel</h3><div class="grid" id="shirt-products"></div></div>
-  <div class="shop-group"><h3 class="shop-title">Hats</h3><div class="grid" id="hat-products"></div></div>
-</section>
-
-<section class="trust">
-  <div class="trustitem"><b>♡</b><h3>Personalized Service</h3><p>Real people. Real support.</p></div>
-  <div class="trustitem"><b>◇</b><h3>High Quality Products</h3><p>Built to last.</p></div>
-  <div class="trustitem"><b>⇢</b><h3>Fast Turnaround</h3><p>Get it when you need it.</p></div>
-  <div class="trustitem"><b>◯</b><h3>Let's Talk</h3><p>Tell us what you need.</p></div>
-</section>
-
-<section class="section order" id="order"><div class="wrap">
-  <div class="sectiontitle"><div class="eyebrow">Start Your Order</div><h2>Request an Order</h2><p>Send us the details. Point Remove Prints will receive your request by email and contact you to confirm everything.</p></div>
-  <form class="form" action="https://formsubmit.co/pointremoveprints@gmail.com" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_subject" value="New Point Remove Prints Website Order">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://pointremoveprints.com/thank-you.html">
-    <input type="hidden" name="_url" value="https://pointremoveprints.com/">
-    <input type="text" name="_honey" style="display:none">
-    <div><label for="name">Your name *</label><input id="name" name="Customer Name" required autocomplete="name"></div>
-    <div><label for="phone">Phone number *</label><input id="phone" name="Phone" type="tel" required autocomplete="tel"></div>
-    <div><label for="email">Email address *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-    <div><label for="type">Order type *</label><select id="type" name="Order Type" required><option value="">Choose one</option><option>Custom T-Shirt</option><option>Hoodie / Sweatshirt</option><option>Embroidery</option><option>Hat</option><option>DTF Transfers Only</option><option>Team / Group Order</option><option>Business / Church Order</option><option>Other</option></select></div>
-    <div class="full"><label for="design">Design / product</label><input id="design" name="Design or Product" placeholder="Choose a product above or describe what you want"></div>
-    <div><label for="color">Garment color</label><input id="color" name="Garment Color" placeholder="Black, maroon, sand, etc."></div>
-    <div><label for="qty">Quantity *</label><input id="qty" name="Quantity" type="number" min="1" required placeholder="1"></div>
-    <div class="full"><label for="sizes">Sizes & quantities *</label><input id="sizes" name="Sizes and Quantities" required placeholder="Example: 1 Small, 2 Large, 1 XL"></div>
-    <div class="full"><label for="placement">Print / embroidery placement</label><select id="placement" name="Placement"><option>Not sure yet</option><option>Front only</option><option>Back only</option><option>Front + back</option><option>Left chest / pocket + back</option><option>Hat front</option><option>Other</option></select></div>
-    <div class="full"><label for="details">Order details *</label><textarea id="details" name="Order Details" required placeholder="Names/numbers, design changes, deadline, garment preference, special instructions, etc."></textarea></div>
-    <div class="full filebox"><label for="attachment">Upload artwork or photo (optional)</label><input id="attachment" type="file" name="attachment" accept=".png,.jpg,.jpeg,.pdf"><div class="note">PNG, JPG/JPEG or PDF. Keep the total upload under 10 MB.</div></div>
-    <div class="full note">After submission, you may see a quick anti-spam verification. Your request will then be emailed to Point Remove Prints.</div>
-    <button class="btn full" type="submit">Send Order Request</button>
-  </form>
-</div></section>
-
-<section class="contact" id="contact"><h2>Have an idea?</h2><p>Send it to Point Remove Prints and we'll help turn it into something you can wear.</p><p><a class="email" href="mailto:pointremoveprints@gmail.com">pointremoveprints@gmail.com</a></p></section>
-</main>
-<footer>© 2026 Point Remove Prints · Custom Apparel · Embroidery · DTF Transfers · Hats</footer>
-
-<script src="products.js"></script>
-<script>
-const products=Array.isArray(window.PRP_PRODUCTS)?window.PRP_PRODUCTS:[];
-const esc=v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
-function renderProducts(category,targetId){
-  const target=document.getElementById(targetId);const list=products.filter(p=>p.category===category);
-  if(!list.length){target.innerHTML=`<div class="empty">No ${category==='hat'?'hats':'shirts'} listed yet. New items can be added anytime.</div>`;return;}
-  target.innerHTML=list.map(p=>{const price=p.price?`<div class="price">${esc(p.price)}</div>`:'';const sizes=p.sizes?`<div class="meta"><b>Sizes:</b> ${esc(p.sizes)}</div>`:'';const colors=p.colors?`<div class="meta"><b>Colors:</b> ${esc(p.colors)}</div>`:'';return `<article class="card"><img src="${esc(p.image)}" alt="${esc(p.name)}"><div class="txt"><div class="tag">${esc(p.tag||category)}</div><h3>${esc(p.name)}</h3>${price}<p>${esc(p.description||'')}</p>${sizes}${colors}<button class="btn order-design" data-design="${esc(p.name)}" data-type="${esc(p.orderType||'')}">Request This Item</button></div></article>`;}).join('');
-}
-renderProducts('shirt','shirt-products');renderProducts('hat','hat-products');
-document.addEventListener('click',e=>{const btn=e.target.closest('.order-design');if(!btn)return;document.getElementById('design').value=btn.dataset.design||'';if(btn.dataset.type)document.getElementById('type').value=btn.dataset.type;document.getElementById('order').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('name').focus(),450);});
-</script>
-</body>
-</html>
+<main id="home">
+<section class="hero"><div class="hero-grid"><div class="hero-copy"><h1>Custom<br>Apparel</h1><div class="script">Made Your Way.</div><p>Custom shirts, team gear, business apparel, embroidery, hats, DTF transfers and outdoor designs.</p><a class="btn" href="#order">Get a Free Mockup ›</a><div class="service-icons" id="services"><div class="service"><div class="round">B</div>Business<br>Apparel</div><div class="service"><div class="round">T</div>Team<br>Uniforms</div><div class="service"><div class="round">C</div>Church<br>Orders</div><div class="service"><div class="round">H</div>Hunting &<br>Outdoors</div><div class="service"><div class="round">⚡</div>Fast<br>Turnaround</div></div><div class="life">More than shirts...<small>It's a lifestyle.</small></div></div><div class="hero-img"><img src="images/hero-folded-shirts.jpg" alt="Point Remove Prints folded shirts and custom hat"></div></div></section>
+<section class="categories"><div class="cat-grid"><a class="cat" href="#shop"><img src="images/10759.png" alt="Custom apparel"><span>Custom Apparel <b>›</b></span></a><a class="cat" href="#shop"><img src="images/11242.png" alt="Embroidery"><span>Embroidery <b>›</b></span></a><a class="cat" href="#shop"><img src="images/10911.png" alt="DTF transfers"><span>DTF Transfers <b>›</b></span></a><a class="cat" href="#shop"><img src="images/11705.png" alt="Hats"><span>Hats <b>›</b></span></a><a class="cat" href="#shop"><img src="images/10760.png" alt="Outdoors"><span>Outdoors <b>›</b></span></a></div></section>
+<section class="banner"><div><div class="banner-k">Apparel for Every Occasion</div><h2>Work • Play • Faith • Family</h2><p>Let's bring your ideas to life.</p><a class="btn" href="#order">Request an Order</a></div></section>
+<section class="benefits" id="about"><div class="benefit"><i>♡</i><h3>Personalized<br>Service</h3><p>Real people. Real support.</p></div><div class="benefit"><i>◇</i><h3>High Quality<br>Products</h3><p>Built to last.</p></div><div class="benefit"><i>⇥</i><h3>Fast<br>Turnaround</h3><p>Get it when you need it.</p></div><div class="benefit"><i>◯</i><h3>Let's Talk</h3><p>Tell us what you need!</p></div></section>
+<section class="section" id="shop"><div class="wrap"><div class="section-head"><div class="eyebrow">Made by Point Remove Prints</div><h2>Shop Shirts & Hats</h2><p class="subtext">Browse current styles and send an order request. No payment is taken online yet—we'll confirm your details, artwork and final price with you.</p></div><h3 class="shop-title">Shirts & Apparel</h3><div class="grid" id="shirt-products"></div><h3 class="shop-title">Hats</h3><div class="grid" id="hat-products"></div></div></section>
+<section class="section order" id="order"><div class="wrap"><div class="orderbox"><div class="section-head"><div class="eyebrow">Let's Bring Your Ideas to Life</div><h2>Request an Order</h2><p class="subtext">Tell us what you need and Point Remove Prints will receive your request by email.</p></div><form class="form" action="https://formsubmit.co/pointremoveprints@gmail.com" method="POST" enctype="multipart/form-data"><input type="hidden" name="_subject" value="New Point Remove Prints Website Order"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://pointremoveprints.com/thank-you.html"><input type="hidden" name="_url" value="https://pointremoveprints.com/"><input type="text" name="_honey" style="display:none"><div><label for="name">Your name *</label><input id="name" name="Customer Name" required></div><div><label for="phone">Phone number *</label><input id="phone" name="Phone" type="tel" required></div><div><label for="email">Email address *</label><input id="email" name="email" type="email" required></div><div><label for="type">Order type *</label><select id="type" name="Order Type" required><option value="">Choose one</option><option>Custom T-Shirt</option><option>Hoodie / Sweatshirt</option><option>Embroidery</option><option>Hat</option><option>DTF Transfers Only</option><option>Team / Group Order</option><option>Business / Church Order</option><option>Other</option></select></div><div class="full"><label for="design">Design / product</label><input id="design" name="Design or Product"></div><div><label for="color">Garment color</label><input id="color" name="Garment Color"></div><div><label for="qty">Quantity *</label><input id="qty" name="Quantity" type="number" min="1" required></div><div class="full"><label for="sizes">Sizes & quantities *</label><input id="sizes" name="Sizes and Quantities" required></div><div class="full"><label for="placement">Placement</label><select id="placement" name="Placement"><option>Not sure yet</option><option>Front only</option><option>Back only</option><option>Front + back</option><option>Left chest / pocket + back</option><option>Hat front</option><option>Other</option></select></div><div class="full"><label for="details">Order details *</label><textarea id="details" name="Order Details" required></textarea></div><div class="full filebox"><label for="attachment">Upload artwork or photo</label><input id="attachment" type="file" name="attachment" accept=".png,.jpg,.jpeg,.pdf"><div class="note">PNG, JPG/JPEG or PDF. Keep total upload under 10 MB.</div></div><button class="btn full" type="submit">Send Order Request</button></form></div></div></section>
+<section class="contact"><h2>Have an idea?</h2><p>Send it to Point Remove Prints and we'll help turn it into something you can wear.</p><p><a href="mailto:pointremoveprints@gmail.com">pointremoveprints@gmail.com</a></p></section>
+</main><footer>© 2026 Point Remove Prints · Custom Apparel · Embroidery · DTF Transfers · Hats · Outdoors</footer>
+<script src="products.js"></script><script>const products=Array.isArray(window.PRP_PRODUCTS)?window.PRP_PRODUCTS:[];const esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));function render(category,id){const t=document.getElementById(id),l=products.filter(p=>p.category===category);if(!l.length){t.innerHTML='<div class="empty">No '+(category==='hat'?'hats':'shirts')+' listed yet.</div>';return}t.innerHTML=l.map(p=>'<article class="card"><img src="'+esc(p.image)+'" alt="'+esc(p.name)+'"><div class="txt"><div class="tag">'+esc(p.tag||category)+'</div><h3>'+esc(p.name)+'</h3>'+(p.price?'<div class="price">'+esc(p.price)+'</div>':'')+'<p>'+esc(p.description||'')+'</p>'+(p.sizes?'<div class="meta"><b>Sizes:</b> '+esc(p.sizes)+'</div>':'')+(p.colors?'<div class="meta"><b>Colors:</b> '+esc(p.colors)+'</div>':'')+'<button class="btn order-design" data-design="'+esc(p.name)+'" data-type="'+esc(p.orderType||'')+'">Request This Item</button></div></article>').join('')}render('shirt','shirt-products');render('hat','hat-products');document.addEventListener('click',e=>{const b=e.target.closest('.order-design');if(b){document.getElementById('design').value=b.dataset.design||'';if(b.dataset.type)document.getElementById('type').value=b.dataset.type;document.getElementById('order').scrollIntoView({behavior:'smooth'})}});document.getElementById('menu')?.addEventListener('click',()=>{let m=document.getElementById('mobileNav');if(m){m.remove();return}m=document.createElement('div');m.id='mobileNav';m.style.cssText='position:fixed;top:84px;left:0;right:0;background:#fbf8f2;border-bottom:1px solid #d8cfc2;z-index:70;padding:18px 24px;display:grid;gap:14px;font:600 14px Georgia,serif;text-transform:uppercase';m.innerHTML='<a href="#home">Home</a><a href="#shop">Shop</a><a href="#services">Services</a><a href="#about">About</a><a href="#order">Request an Order</a>';m.addEventListener('click',()=>m.remove());document.body.appendChild(m)});</script>
+</body></html>
