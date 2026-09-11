@@ -71,37 +71,38 @@ window.PRP_PRODUCTS = [
   }
 ];
 
-// Keep the folded-shirts hero from being stretched beyond its source size.
-// This makes the current photo look much sharper while preserving the mockup layout.
+// Use the higher-resolution folded-shirts image uploaded to GitHub.
 (() => {
+  const hero = document.querySelector('.hero-img img');
+  if (hero) hero.src = 'images/hero-folded-shirts-hq-2.jpg';
+
   const style = document.createElement('style');
   style.textContent = `
     .hero-img{
-      display:flex !important;
-      align-items:center !important;
-      justify-content:center !important;
-      padding:22px 38px !important;
+      padding:0 !important;
       background:#e4e0d7 !important;
+      overflow:hidden !important;
     }
     .hero-img img{
-      width:auto !important;
-      height:auto !important;
-      max-width:515px !important;
-      max-height:650px !important;
-      object-fit:contain !important;
-      object-position:center center !important;
-      filter:contrast(1.04) saturate(1.02);
+      width:100% !important;
+      height:100% !important;
+      max-width:none !important;
+      max-height:none !important;
+      object-fit:cover !important;
+      object-position:center top !important;
+      filter:none !important;
     }
     @media(max-width:760px){
       .hero-img{
-        height:auto !important;
+        height:475px !important;
         min-height:0 !important;
-        padding:18px 12px 26px !important;
+        padding:0 !important;
       }
       .hero-img img{
-        width:88% !important;
-        max-width:515px !important;
-        height:auto !important;
+        width:100% !important;
+        height:100% !important;
+        object-fit:cover !important;
+        object-position:center top !important;
       }
     }
   `;
