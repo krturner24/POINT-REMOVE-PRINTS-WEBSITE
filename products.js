@@ -108,3 +108,66 @@ window.PRP_PRODUCTS = [
   `;
   document.head.appendChild(style);
 })();
+
+// Text-only shopping groups directly below the Free Mockup button.
+(() => {
+  const oldImageCategories = document.querySelector('.categories');
+  if (oldImageCategories) oldImageCategories.remove();
+
+  const mockupButton = document.querySelector('.hero-copy .btn');
+  if (!mockupButton || document.querySelector('.quick-groups')) return;
+
+  const groups = document.createElement('nav');
+  groups.className = 'quick-groups';
+  groups.setAttribute('aria-label', 'Shop categories');
+  groups.innerHTML = `
+    <a href="#shop">T-Shirts</a>
+    <a href="#shop">Hoodies</a>
+    <a href="#shop">Hats</a>
+    <a href="#shop">Prints</a>
+  `;
+  mockupButton.insertAdjacentElement('afterend', groups);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .quick-groups{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:9px;
+      width:100%;
+      max-width:550px;
+      margin-top:18px;
+    }
+    .quick-groups a{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:10px 8px;
+      border:1px solid #777260;
+      background:rgba(255,255,255,.38);
+      color:#2d2a24;
+      font:600 11px Georgia,serif;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      text-align:center;
+    }
+    .quick-groups a:hover{
+      background:#4b4d38;
+      color:#fff;
+    }
+    .service-icons{margin-top:24px !important;}
+    @media(max-width:760px){
+      .quick-groups{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+        margin-top:18px;
+      }
+      .quick-groups a{
+        min-height:50px;
+        font-size:12px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
