@@ -1,6 +1,7 @@
 // Point Remove Prints product catalog.
 // To add an item later: upload its photo into /images, then add one product block below.
 // catalogCategory should be: "tshirt", "hoodie", "hat", or "print".
+// Add collection: "faith" to any Christian/Faith Line product.
 // Keep category as "shirt" or "hat" so the original page fallback still works.
 
 window.PRP_PRODUCTS = [
@@ -179,14 +180,41 @@ window.PRP_PRODUCTS = [
   document.head.appendChild(style);
 })();
 
+// Faith Line link in the main navigation and mobile menu.
+(() => {
+  const nav = document.querySelector('.nav');
+  if (nav && !nav.querySelector('[data-faith-nav]')) {
+    const link = document.createElement('a');
+    link.href = '#shop';
+    link.textContent = 'Faith Line';
+    link.dataset.faithNav = 'true';
+    nav.insertBefore(link, nav.querySelector('a[href="#about"]') || null);
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#menu')) return;
+    setTimeout(() => {
+      const mobile = document.getElementById('mobileNav');
+      if (mobile && !mobile.querySelector('[data-faith-nav]')) {
+        const link = document.createElement('a');
+        link.href = '#shop';
+        link.textContent = 'Faith Line';
+        link.dataset.faithNav = 'true';
+        const about = mobile.querySelector('a[href="#about"]');
+        mobile.insertBefore(link, about || null);
+      }
+    }, 0);
+  });
+})();
+
 // Scalable catalog: filters, search, and Load More so the page can hold lots of products.
 window.addEventListener('DOMContentLoaded', () => {
   const shop = document.getElementById('shop');
   if (!shop) return;
 
   const products = Array.isArray(window.PRP_PRODUCTS) ? window.PRP_PRODUCTS : [];
-  const esc = v => String(v ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
-  const labels = {all:'All', tshirt:'T-Shirts', hoodie:'Hoodies', hat:'Hats', print:'Prints'};
+  const esc = v => String(v ?? '').replace(/[&<>'\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c]));
+  const labels = {all:'All', tshirt:'T-Shirts', hoodie:'Hoodies', hat:'Hats', print:'Prints', faith:'Faith Line'};
 
   shop.innerHTML = `
     <div class="wrap catalog-wrap">
@@ -202,6 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
           <button type="button" class="catalog-filter" data-filter="hoodie">Hoodies</button>
           <button type="button" class="catalog-filter" data-filter="hat">Hats</button>
           <button type="button" class="catalog-filter" data-filter="print">Prints</button>
+          <button type="button" class="catalog-filter faith-filter" data-filter="faith">Faith Line</button>
         </div>
         <div class="catalog-search-wrap">
           <input id="catalog-search" class="catalog-search" type="search" placeholder="Search designs..." aria-label="Search catalog">
@@ -220,6 +249,7 @@ window.addEventListener('DOMContentLoaded', () => {
     .catalog-filters{display:flex;gap:8px;flex-wrap:wrap}
     .catalog-filter{border:1px solid #bcb2a4;background:#fff;color:#332f29;padding:11px 15px;font:600 11px Georgia,serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
     .catalog-filter.active,.catalog-filter:hover{background:#4b4d38;color:#fff;border-color:#4b4d38}
+    .faith-filter{border-color:#777260}
     .catalog-search-wrap{min-width:240px;flex:0 1 320px}
     .catalog-search{width:100%;padding:12px 14px;border:1px solid #bcb2a4;background:#fff;font-size:15px}
     .catalog-status{color:#746e65;font-size:13px;margin:10px 0 18px}
@@ -252,12 +282,17 @@ window.addEventListener('DOMContentLoaded', () => {
   let shown = 12;
 
   const productCategory = p => p.catalogCategory || (p.category === 'hat' ? 'hat' : /hood/i.test(p.name || '') ? 'hoodie' : 'tshirt');
+  const isFaith = p => p.collection === 'faith' || p.line === 'faith' || /\b(faith|christian|jesus|scripture|bible)\b/i.test([p.tag,p.description].filter(Boolean).join(' '));
 
   function matchingProducts(){
     const q = (search.value || '').trim().toLowerCase();
     return products.filter(p => {
       const cat = productCategory(p);
-      if (active !== 'all' && cat !== active) return false;
+      if (active === 'faith') {
+        if (!isFaith(p)) return false;
+      } else if (active !== 'all' && cat !== active) {
+        return false;
+      }
       if (!q) return true;
       return [p.name,p.tag,p.description,p.colors,p.sizes].some(v => String(v || '').toLowerCase().includes(q));
     });
@@ -265,10 +300,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function card(p){
     const cat = productCategory(p);
+    const kicker = isFaith(p) ? 'Faith Line' : (labels[cat] || p.tag || 'Custom Apparel');
     return `<article class="catalog-card">
       <img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">
       <div class="catalog-info">
-        <div class="catalog-kicker">${esc(labels[cat] || p.tag || 'Custom Apparel')}</div>
+        <div class="catalog-kicker">${esc(kicker)}</div>
         <h3>${esc(p.name)}</h3>
         ${p.price ? `<div class="catalog-price">${esc(p.price)}</div>` : ''}
         ${p.description ? `<p>${esc(p.description)}</p>` : ''}
@@ -288,6 +324,11 @@ window.addEventListener('DOMContentLoaded', () => {
     more.hidden = shown >= matches.length;
   }
 
+  function setFilter(wanted){
+    const target = filters.find(b => b.dataset.filter === wanted);
+    if (target) target.click();
+  }
+
   filters.forEach(btn => btn.addEventListener('click', () => {
     active = btn.dataset.filter || 'all';
     filters.forEach(b => b.classList.toggle('active', b === btn));
@@ -296,11 +337,14 @@ window.addEventListener('DOMContentLoaded', () => {
   search.addEventListener('input', () => renderCatalog(true));
   more.addEventListener('click', () => { shown += 12; renderCatalog(false); });
 
-  document.querySelectorAll('.quick-groups [data-catalog]').forEach(link => link.addEventListener('click', () => {
-    const wanted = link.dataset.catalog;
-    const target = filters.find(b => b.dataset.filter === wanted);
-    if (target) target.click();
-  }));
+  document.querySelectorAll('.quick-groups [data-catalog]').forEach(link => link.addEventListener('click', () => setFilter(link.dataset.catalog)));
+  document.querySelectorAll('[data-faith-nav]').forEach(link => link.addEventListener('click', () => setFilter('faith')));
+
+  // Catch Faith Line links added to the mobile menu after it opens.
+  document.addEventListener('click', e => {
+    const faithLink = e.target.closest('[data-faith-nav]');
+    if (faithLink) setTimeout(() => setFilter('faith'), 0);
+  });
 
   renderCatalog(true);
 });
