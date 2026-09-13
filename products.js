@@ -8,6 +8,32 @@ window.PRP_PRODUCTS = [
   {
     category: "shirt",
     catalogCategory: "tshirt",
+    collection: "faith",
+    name: "Unashamed T-Shirt",
+    image: "images/faith-unashamed-tshirt.jpg",
+    tag: "Faith Line",
+    description: "Unashamed — Romans 1:16 faith T-shirt with left-chest front and full-back design.",
+    price: "",
+    sizes: "",
+    colors: "Black",
+    orderType: "Custom T-Shirt"
+  },
+  {
+    category: "shirt",
+    catalogCategory: "hoodie",
+    collection: "faith",
+    name: "Unashamed Hoodie",
+    image: "images/faith-unashamed-hoodie.jpg",
+    tag: "Faith Line",
+    description: "Unashamed — Romans 1:16 faith hoodie with left-chest front and full-back design.",
+    price: "",
+    sizes: "",
+    colors: "Black",
+    orderType: "Hoodie / Sweatshirt"
+  },
+  {
+    category: "shirt",
+    catalogCategory: "tshirt",
     name: "Morrilton Devil Dogs",
     image: "images/11242.png",
     tag: "School & Team",
