@@ -9,7 +9,7 @@ window.PRP_PRODUCTS = [
     image: "images/faith-it-is-finished-tshirt.png",
     tag: "Faith Line",
     description: "It Is Finished — John 19:30. Clean front design with a small cross and scripture reference.",
-    price: "",
+    price: "$18 front • $20 pocket + back",
     sizes: "",
     colors: "Black, Charcoal, Navy, Dark Olive, Maroon, Sand",
     orderType: "Custom T-Shirt"
@@ -22,7 +22,7 @@ window.PRP_PRODUCTS = [
     image: "images/faith-unashamed-tshirt.jpg",
     tag: "Faith Line",
     description: "Unashamed — Romans 1:16 faith T-shirt with left-chest front and full-back design.",
-    price: "",
+    price: "$18 front • $20 pocket + back",
     sizes: "",
     colors: "Black, Charcoal, Navy, Dark Olive, Maroon, Sand",
     orderType: "Custom T-Shirt"
@@ -35,7 +35,7 @@ window.PRP_PRODUCTS = [
     image: "images/faith-unashamed-hoodie.jpg",
     tag: "Faith Line",
     description: "Unashamed — Romans 1:16 faith hoodie with left-chest front and full-back design.",
-    price: "",
+    price: "$28 front • $30 pocket + back",
     sizes: "",
     colors: "Black, Charcoal, Navy, Dark Olive, Maroon, Sand",
     orderType: "Hoodie / Sweatshirt"
