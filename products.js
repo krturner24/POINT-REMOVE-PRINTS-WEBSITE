@@ -154,7 +154,7 @@ window.PRP_PRODUCTS = [
     .catalog-filter{border:1px solid #bcb2a4;background:#fff;color:#332f29;padding:11px 15px;font:600 11px Georgia,serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.catalog-filter.active,.catalog-filter:hover{background:#4b4d38;color:#fff;border-color:#4b4d38}.faith-filter{border-color:#777260}
     .catalog-search-wrap{min-width:240px;flex:0 1 320px}.catalog-search{width:100%;padding:12px 14px;border:1px solid #bcb2a4;background:#fff;font-size:15px}.catalog-status{color:#746e65;font-size:13px;margin:10px 0 18px}
     .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.catalog-card{background:#fff;border:1px solid #e4ddd1;display:flex;flex-direction:column;min-width:0}.catalog-card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee9e0}.catalog-info{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}
-    .catalog-kicker{font:700 9px Georgia,serif;letter-spacing:.17em;text-transform:uppercase;color:#74705d}.catalog-card h3{font:400 21px/1.08 Georgia,serif;margin:0}.catalog-card p{font-size:13px;line-height:1.4;color:#6d665f;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.catalog-price{font:600 18px Georgia,serif}.catalog-meta{font-size:12px;color:#645e57}.catalog-card .btn{margin-top:auto;width:100%;padding:12px 10px;font-size:10px}.catalog-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.catalog-options label{font:600 10px Georgia,serif;text-transform:uppercase;letter-spacing:.05em}.catalog-options select{display:block;width:100%;margin-top:5px;padding:10px 7px;border:1px solid #bcb2a4;background:#fff;color:#211c18;font-size:13px}.catalog-options .catalog-placement{grid-column:1/-1}.catalog-options+.btn{margin-top:4px}.catalog-empty{grid-column:1/-1;padding:38px 20px;text-align:center;border:1px dashed #c7bdaf;color:#746e65;background:#fff}.catalog-more-wrap{text-align:center;margin-top:26px}.catalog-more{min-width:180px}.catalog-more[hidden]{display:none}
+    .catalog-kicker{font:700 9px Georgia,serif;letter-spacing:.17em;text-transform:uppercase;color:#74705d}.catalog-card h3{font:400 21px/1.08 Georgia,serif;margin:0}.catalog-card p{font-size:13px;line-height:1.4;color:#6d665f;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.catalog-price{font:600 18px Georgia,serif}.catalog-meta{font-size:12px;color:#645e57}.catalog-card .btn{margin-top:auto;width:100%;padding:12px 10px;font-size:10px}.catalog-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.catalog-options label{font:600 10px Georgia,serif;text-transform:uppercase;letter-spacing:.05em}.catalog-options select{display:block;width:100%;margin-top:5px;padding:10px 7px;border:1px solid #bcb2a4;background:#fff;color:#211c18;font-size:13px}.catalog-options .catalog-placement{grid-column:1/-1}.catalog-options+.btn{margin-top:4px}.catalog-qty{grid-column:1/-1}.catalog-qty input{display:block;width:100%;margin-top:5px;padding:10px 7px;border:1px solid #bcb2a4;background:#fff;font-size:13px}.order-cart{margin-top:34px;padding:24px;background:#f1ece4;border:1px solid #d8cfc2}.order-cart h3{font:400 28px Georgia,serif;margin:0 0 12px}.order-cart [hidden]{display:none}.cart-list{list-style:none;margin:0;padding:0}.cart-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #d8cfc2;line-height:1.4}.cart-list button{border:1px solid #bcb2a4;background:#fff;padding:8px 11px;cursor:pointer}.cart-total{margin:16px 0;font:600 18px Georgia,serif}.cart-note{color:#6d665f;font-size:13px}.catalog-empty{grid-column:1/-1;padding:38px 20px;text-align:center;border:1px dashed #c7bdaf;color:#746e65;background:#fff}.catalog-more-wrap{text-align:center;margin-top:26px}.catalog-more{min-width:180px}.catalog-more[hidden]{display:none}
     @media(max-width:980px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:760px){.hero-img{height:475px!important;min-height:0!important;padding:0!important}.quick-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.quick-groups a{min-height:50px;font-size:12px}.catalog-tools{display:block}.catalog-filters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.catalog-filter:first-child{grid-column:1/-1}.catalog-search-wrap{margin-top:12px;min-width:0}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.catalog-info{padding:10px}.catalog-card h3{font-size:17px}.catalog-card p{font-size:11px}.catalog-kicker{font-size:8px}.catalog-card .btn{font-size:9px;padding:11px 7px}}
   `;
@@ -193,6 +193,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <button type="button" class="catalog-filter active" data-filter="all">All</button><button type="button" class="catalog-filter" data-filter="tshirt">T-Shirts</button><button type="button" class="catalog-filter" data-filter="hoodie">Hoodies</button><button type="button" class="catalog-filter" data-filter="hat">Hats</button><button type="button" class="catalog-filter" data-filter="print">Prints</button><button type="button" class="catalog-filter faith-filter" data-filter="faith">Faith Line</button>
       </div><div class="catalog-search-wrap"><input id="catalog-search" class="catalog-search" type="search" placeholder="Search designs..." aria-label="Search catalog"></div></div>
       <div class="catalog-status"><span id="catalog-count"></span></div><div class="catalog-grid" id="catalog-grid"></div><div class="catalog-more-wrap"><button type="button" id="catalog-more" class="btn catalog-more">Load More</button></div>
+      <section class="order-cart" id="order-cart" aria-live="polite"><h3>Your Order</h3><p id="cart-empty">Choose an item, its options and quantity, then tap Add to Order.</p><ul class="cart-list" id="cart-list"></ul><div class="cart-total" id="cart-total"></div><p class="cart-note">This is an order request. We'll confirm availability, artwork, shipping or pickup, and final total before payment.</p><a class="btn" href="#order" id="cart-review" hidden>Finish Order Request</a></section>
     </div>`;
 
   const grid = document.getElementById('catalog-grid');
@@ -202,6 +203,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const filters = [...document.querySelectorAll('.catalog-filter')];
   let active = 'all';
   let shown = 12;
+  const cart = [];
+  const cartList = document.getElementById('cart-list');
+  const cartEmpty = document.getElementById('cart-empty');
+  const cartTotal = document.getElementById('cart-total');
+  const cartReview = document.getElementById('cart-review');
 
   function matchingProducts(){
     const q = (search.value || '').trim().toLowerCase();
@@ -234,6 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function refreshPrice(card){
     const size = card.querySelector('.catalog-size');
     const placement = card.querySelector('.catalog-placement select');
+    const quantityInput = card.querySelector('.catalog-quantity');
     if (!size || !placement) return;
     const selected = size.value;
     size.innerHTML = sizeOptions(card.dataset.category,placement.value);
@@ -244,7 +251,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function card(p){
     const cat = productCategory(p);
     const kicker = isFaith(p) ? 'Faith Line' : (labels[cat] || p.tag || 'Custom Apparel');
-    return `<article class="catalog-card" data-category="${esc(cat)}"><img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy"><div class="catalog-info"><div class="catalog-kicker">${esc(kicker)}</div><h3>${esc(p.name)}</h3>${cat === "tshirt" || cat === "hoodie" ? `<div class="catalog-price">Select size for exact price</div>` : (p.price ? `<div class="catalog-price">${esc(p.price)}</div>` : '')}${p.description ? `<p>${esc(p.description)}</p>` : ''}${p.sizes ? `<div class="catalog-meta"><b>Sizes:</b> ${esc(p.sizes)}</div>` : ''}${p.colors ? `<div class="catalog-meta"><b>Colors:</b> ${esc(p.colors)}</div>` : ''}${cat === "tshirt" || cat === "hoodie" ? `<div class="catalog-options"><label class="catalog-placement">Print placement<select aria-label="Print placement for ${esc(p.name)}"><option value="front">Front print</option><option value="pocket-back">Pocket + back</option></select></label><label>Size<select class="catalog-size" aria-label="Size for ${esc(p.name)}" required>${sizeOptions(cat,"front")}</select></label><label>Color<select class="catalog-color" aria-label="Color for ${esc(p.name)}" required>${optionMarkup(choices(p.colors,defaultColors),"color")}</select></label></div>` : ''}<button class="btn order-design" data-design="${esc(p.name)}" data-type="${esc(p.orderType || '')}">Request This Item</button></div></article>`;
+    return `<article class="catalog-card" data-category="${esc(cat)}"><img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy"><div class="catalog-info"><div class="catalog-kicker">${esc(kicker)}</div><h3>${esc(p.name)}</h3>${cat === "tshirt" || cat === "hoodie" ? `<div class="catalog-price">Select size for exact price</div>` : (p.price ? `<div class="catalog-price">${esc(p.price)}</div>` : '')}${p.description ? `<p>${esc(p.description)}</p>` : ''}${p.sizes ? `<div class="catalog-meta"><b>Sizes:</b> ${esc(p.sizes)}</div>` : ''}${p.colors ? `<div class="catalog-meta"><b>Colors:</b> ${esc(p.colors)}</div>` : ''}${cat === "tshirt" || cat === "hoodie" ? `<div class="catalog-options"><label class="catalog-placement">Print placement<select aria-label="Print placement for ${esc(p.name)}"><option value="front">Front print</option><option value="pocket-back">Pocket + back</option></select></label><label>Size<select class="catalog-size" aria-label="Size for ${esc(p.name)}" required>${sizeOptions(cat,"front")}</select></label><label>Color<select class="catalog-color" aria-label="Color for ${esc(p.name)}" required>${optionMarkup(choices(p.colors,defaultColors),"color")}</select></label></div>` : ''}<label class="catalog-qty">Quantity<input class="catalog-quantity" type="number" min="1" max="999" value="1" aria-label="Quantity for ${esc(p.name)}"></label><button class="btn order-design" data-design="${esc(p.name)}" data-type="${esc(p.orderType || '')}">Add to Order</button></div></article>`;
   }
 
   function renderCatalog(reset=false){
@@ -269,6 +276,27 @@ window.addEventListener('DOMContentLoaded', () => {
   search.addEventListener('input', () => renderCatalog(true));
   more.addEventListener('click', () => { shown += 12; renderCatalog(false); });
   document.querySelectorAll('.quick-groups [data-catalog]').forEach(link => link.addEventListener('click', () => setFilter(link.dataset.catalog)));
+  function updateCart(){
+    cartEmpty.hidden = cart.length > 0;
+    cartReview.hidden = cart.length === 0;
+    cartList.innerHTML = cart.map((item,index) => '<li><span><strong>'+esc(item.name)+'</strong><br>'+esc([item.size,item.color,item.placement].filter(Boolean).join(' · '))+' · Qty '+item.quantity+(item.unitPrice !== null ? ' · $'+item.unitPrice+' each' : ' · Price to confirm')+'</span><button type="button" data-remove="'+index+'" aria-label="Remove '+esc(item.name)+'">Remove</button></li>').join('');
+    const subtotal = cart.reduce((sum,item) => sum + (item.unitPrice || 0)*item.quantity,0);
+    cartTotal.textContent = cart.length ? 'Priced items subtotal: $'+subtotal.toFixed(2)+(cart.some(item => item.unitPrice === null) ? ' (other items quoted separately)' : '') : '';
+    document.getElementById('design').value = cart.map(item => item.name).join('; ');
+    document.getElementById('qty').value = cart.length ? String(cart.reduce((sum,item) => sum+item.quantity,0)) : '';
+    document.getElementById('sizes').value = cart.map(item => item.quantity+' × '+item.name+(item.size ? ' — '+item.size : '')).join('; ');
+    document.getElementById('color').value = [...new Set(cart.map(item => item.color).filter(Boolean))].join(', ');
+    document.getElementById('catalog-unit-price').value = cart.length === 1 && cart[0].unitPrice !== null ? '$'+cart[0].unitPrice+' each' : 'See itemized order';
+    document.getElementById('catalog-order-summary').value = cart.map((item,index) => (index+1)+'. '+item.quantity+' × '+item.name+' | '+[item.size,item.color,item.placement].filter(Boolean).join(' | ')+' | '+(item.unitPrice !== null ? '$'+item.unitPrice+' each = $'+(item.unitPrice*item.quantity).toFixed(2) : 'Price to confirm')).join('\n');
+    document.getElementById('catalog-subtotal').value = cart.length ? '$'+subtotal.toFixed(2)+' for priced items; final total to confirm' : '';
+    document.getElementById('details').required = cart.length === 0;
+  }
+  cartList.addEventListener('click', e => {
+    const remove = e.target.closest('[data-remove]');
+    if (!remove) return;
+    cart.splice(Number(remove.dataset.remove),1);
+    updateCart();
+  });
   grid.addEventListener('change', e => {
     const card = e.target.closest('.catalog-card');
     if (card && (e.target.closest('.catalog-placement') || e.target.matches('.catalog-size'))) refreshPrice(card);
@@ -282,12 +310,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const placement = card.querySelector('.catalog-placement select');
     if (size && !size.value) { size.focus(); e.stopPropagation(); return; }
     if (color && !color.value) { color.focus(); e.stopPropagation(); return; }
-    if (size) document.getElementById('sizes').value = size.value;
-    if (color) document.getElementById('color').value = color.value;
-    if (placement) {
-      document.getElementById('placement').value = placement.value === 'pocket-back' ? 'Left chest / pocket + back' : 'Front only';
-      document.getElementById('catalog-unit-price').value = '$'+unitPrice(card.dataset.category,placement.value,size.value)+' each';
-    }
+    if (!quantityInput.checkValidity()) { quantityInput.reportValidity(); e.stopPropagation(); return; }
+    const quantity = Number(quantityInput.value);
+    if (!Number.isInteger(quantity) || quantity < 1 || quantity > 999) { quantityInput.focus(); e.stopPropagation(); return; }
+    const item = {name:button.dataset.design,orderType:button.dataset.type,size:size?.value || '',color:color?.value || '',placement:placement ? (placement.value === 'pocket-back' ? 'Pocket + back' : 'Front print') : '',quantity,unitPrice:placement ? unitPrice(card.dataset.category,placement.value,size.value) : null};
+    cart.push(item);
+    updateCart();
+    if (cart.length === 1 && item.orderType) document.getElementById('type').value = item.orderType;
+    if (cart.length > 1) document.getElementById('type').value = 'Other';
+    button.textContent = 'Added to Order';
+    setTimeout(() => { button.textContent = 'Add to Order'; }, 1600);
+    e.stopPropagation();
+    return;
+
   });
   document.addEventListener('click', e => {
     const faithLink = e.target.closest('[data-faith-nav]');
