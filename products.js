@@ -6,7 +6,7 @@ window.PRP_PRODUCTS = [
     catalogCategory: "tshirt",
     collection: "faith",
     name: "It Is Finished T-Shirt",
-    image: "images/faith-it-is-finished-tshirt.svg",
+    image: "images/faith-it-is-finished-tshirt.png",
     tag: "Faith Line",
     description: "It Is Finished — John 19:30. Clean front design with a small cross and scripture reference.",
     price: "",
