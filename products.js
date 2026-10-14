@@ -111,6 +111,78 @@ window.PRP_PRODUCTS = [
     sizes: "",
     colors: "",
     orderType: "Custom T-Shirt"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "Busy Dilly Dallying",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Green and cream embroidered trucker hat.",
+    price: "$25",
+    sizes: "One size / adjustable",
+    colors: "Green / Cream",
+    orderType: "Hat"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "PRAY",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Olive embroidered trucker hat with PRAY lettering.",
+    price: "$25",
+    sizes: "One size / adjustable",
+    colors: "Olive",
+    orderType: "Hat"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "Game Day",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Neutral embroidered trucker hat with GAME DAY varsity lettering.",
+    price: "$27",
+    sizes: "One size / adjustable",
+    colors: "Cream / Black",
+    orderType: "Hat"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "A Little Bit High Maintenance",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Black embroidered trucker hat with white and cherry-red lettering.",
+    price: "$27",
+    sizes: "One size / adjustable",
+    colors: "Black",
+    orderType: "Hat"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "Homegrown",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Striped embroidered trucker hat with HOMEGROWN lettering.",
+    price: "$27",
+    sizes: "One size / adjustable",
+    colors: "Blue / Cream",
+    orderType: "Hat"
+  },
+  {
+    category: "hat",
+    catalogCategory: "hat",
+    name: "Golf Wives Social Club",
+    image: "",
+    tag: "Embroidered Hat",
+    description: "Pink embroidered trucker hat with Golf Wives Social Club lettering.",
+    price: "$27",
+    sizes: "One size / adjustable",
+    colors: "Pink",
+    orderType: "Hat"
   }
 ];
 
@@ -153,7 +225,7 @@ window.PRP_PRODUCTS = [
     .catalog-wrap{max-width:1240px}.catalog-head{margin-bottom:26px}.catalog-tools{display:flex;justify-content:space-between;gap:18px;align-items:center;margin:0 0 14px;flex-wrap:wrap}.catalog-filters{display:flex;gap:8px;flex-wrap:wrap}
     .catalog-filter{border:1px solid #bcb2a4;background:#fff;color:#332f29;padding:11px 15px;font:600 11px Georgia,serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.catalog-filter.active,.catalog-filter:hover{background:#4b4d38;color:#fff;border-color:#4b4d38}.faith-filter{border-color:#777260}
     .catalog-search-wrap{min-width:240px;flex:0 1 320px}.catalog-search{width:100%;padding:12px 14px;border:1px solid #bcb2a4;background:#fff;font-size:15px}.catalog-status{color:#746e65;font-size:13px;margin:10px 0 18px}
-    .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.catalog-card{background:#fff;border:1px solid #e4ddd1;display:flex;flex-direction:column;min-width:0}.catalog-card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee9e0}.catalog-info{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}
+    .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.catalog-card{background:#fff;border:1px solid #e4ddd1;display:flex;flex-direction:column;min-width:0}.catalog-card img,.catalog-placeholder{width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee9e0}.catalog-placeholder{display:grid;place-items:center;padding:20px;text-align:center;background:#4b4d38;color:#fff;font:600 19px/1.2 Georgia,serif;text-transform:uppercase}.catalog-info{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}
     .catalog-kicker{font:700 9px Georgia,serif;letter-spacing:.17em;text-transform:uppercase;color:#74705d}.catalog-card h3{font:400 21px/1.08 Georgia,serif;margin:0}.catalog-card p{font-size:13px;line-height:1.4;color:#6d665f;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.catalog-price{font:600 18px Georgia,serif}.catalog-meta{font-size:12px;color:#645e57}.catalog-card .btn{margin-top:auto;width:100%;padding:12px 10px;font-size:10px}.catalog-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.catalog-options label{font:600 10px Georgia,serif;text-transform:uppercase;letter-spacing:.05em}.catalog-options select{display:block;width:100%;margin-top:5px;padding:10px 7px;border:1px solid #bcb2a4;background:#fff;color:#211c18;font-size:13px}.catalog-options .catalog-placement{grid-column:1/-1}.catalog-options+.btn{margin-top:4px}.catalog-qty{grid-column:1/-1;font:600 10px Georgia,serif;text-transform:uppercase;letter-spacing:.05em}.catalog-qty input{display:block;width:100%;margin-top:5px;padding:10px 7px;border:1px solid #bcb2a4;background:#fff;font-size:13px}.order-cart{margin-top:34px;padding:24px;background:#f1ece4;border:1px solid #d8cfc2}.order-cart h3{font:400 28px Georgia,serif;margin:0 0 12px}.order-cart [hidden]{display:none}.cart-list{list-style:none;margin:0;padding:0}.cart-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #d8cfc2;line-height:1.4}.cart-list button{border:1px solid #bcb2a4;background:#fff;padding:8px 11px;cursor:pointer}.cart-total{margin:16px 0;font:600 18px Georgia,serif}.cart-note{color:#6d665f;font-size:13px}.catalog-empty{grid-column:1/-1;padding:38px 20px;text-align:center;border:1px dashed #c7bdaf;color:#746e65;background:#fff}.catalog-more-wrap{text-align:center;margin-top:26px}.catalog-more{min-width:180px}.catalog-more[hidden]{display:none}
     @media(max-width:980px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:760px){.hero-img{height:475px!important;min-height:0!important;padding:0!important}.quick-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}.quick-groups a{min-height:50px;font-size:12px}.catalog-tools{display:block}.catalog-filters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.catalog-filter:first-child{grid-column:1/-1}.catalog-search-wrap{margin-top:12px;min-width:0}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.catalog-info{padding:10px}.catalog-card h3{font-size:17px}.catalog-card p{font-size:11px}.catalog-kicker{font-size:8px}.catalog-card .btn{font-size:9px;padding:11px 7px}}
